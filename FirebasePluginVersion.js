@@ -55,7 +55,6 @@ SparshaFRCheck.versionStringCompare = function(v1, v2, options) {
     return 0;
 }
 SparshaFRCheck.compareActions = function(check, version, text) {
-    console.log(version)
     if (version != undefined && SparshaFRCheck.versionStringCompare(check, version) === 1) {
         SparshaFRCheck.inText += "Firebase " + text + ": " + version + " ➜ " + check + "<br>";
         SparshaFRCheck.isOutdated = true;
