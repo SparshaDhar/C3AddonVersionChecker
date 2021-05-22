@@ -7,13 +7,13 @@ assignees: SparshaDhar
 
 ---
 
-### Addon URL(s) (Required)
+### Addon URLs (Required)
 > your_answer_here
 
-### Addon Name(s) (Required)
+### Addon Names (Required)
 > your_answer_here
 
-### Addon Latest Version(s) (Required)
+### Addon Latest Versions (Required)
 
 ### Group Name (Optional)
 > your_answer_here
