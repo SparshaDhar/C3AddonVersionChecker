@@ -84,6 +84,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
                 CompareActions(C3AddonVersion_Latest[key][k], C3AddonVersion_Current[key][k], [k]);
             });
             if (C3AddonVersion_Latest[key].$releaseNotes != undefined) insHTML += '<a href="' + C3AddonVersion_Latest[key].$releaseNotes + '" target="_blank"><h4>View Release Notes</h4></a>';
+	    if (C3AddonVersion_Latest[key].$downloadLink != undefined) insHTML += '<a href="' + C3AddonVersion_Latest[key].$downloadLink + '" target="_blank"><h4>Download Link</h4></a>';
             insHTML += "</div><br>";
         });
 
