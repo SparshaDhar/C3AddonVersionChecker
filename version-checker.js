@@ -99,11 +99,12 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
             document.getElementsByTagName("body")[0].appendChild(divP)
 
             sliderDIVParent.innerHTML = `
-				<div id="version_slider" class="version-slide-out">
+				<div id="version_slider" class="version-slide-out" style="max-height:calc(100vh - 50px);>
 					<svg class="close-slider" height="12" width="12" onclick="C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out')">
 	    				<line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2"/>
 	    				<line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2"/>
 	    			</svg>
+				<div style="overflow-y:auto;max-height:calc(100vh - 50px);">
 	        		<a href="https://github.com/SparshaDhar/C3AddonVersionChecker/" style="color:black"><h3>ADDON UPDATES AVAILABLE</h3></a>
 	        		<i><b>This note is only shown in preview.construct.net</b></i><br>
 	        
@@ -112,6 +113,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 	        			<label for="version-snooze-box">Snooze notification for 1 day</label>
 	        		</div><br>
 	        		` + insHTML + `
+				</div>
 				</div>
 
 				<style>
@@ -128,13 +130,12 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 						margin:0;
 					}
 					#version_slider {
-					    overflow: auto;
 					    color:black;
 					    font-size:12px;
 					    font-family: sans-serif;
 					    position: absolute;
 					    top:8px;
-					    width:278px;
+					    max-width:302px;
 					    padding:16px;
 					    padding-right:18px;
 					    background: #FFD54F;
@@ -152,7 +153,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 
 					.version-slide-out {
 						transition: left 2s;
-					    left:-312px;
+					    left:-336px;
 					}
 				<//style>
 			`;
