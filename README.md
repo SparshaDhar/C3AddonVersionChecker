@@ -1,8 +1,6 @@
 # Addon Version Checker for Construct 3 Preview
 Compare versions and Notify client if installed addon version is older than the latest addon version available (works only in Construct 3 Preview).
 
-A common place for listing all Addon-Version Notifications.
-
 ## Features
 - Group Addons into `<div>`.
 - Optional Release Notes and Download Link
