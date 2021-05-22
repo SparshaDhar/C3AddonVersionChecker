@@ -161,8 +161,8 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 
             C3AddonVersion_Obj.sliderDIV = sliderDIVParent.getElementById('version_slider');
 
-            //Initial Slide in after 2 seconds
-            setTimeout(function() { C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-in') }, 2000);
+            //Initial Slide in after 0.5 seconds
+            setTimeout(function() { C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-in') }, 500);
 
             //Mouse Event Listeners
             var funcEvent1 = function() {
@@ -202,7 +202,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
             function Destroy() {
                 if (isMouseover === false) {
                     setTimeout(function() {
-                        if (isDestroyed == false && getComputedStyle(C3AddonVersion_Obj.sliderDIV).left === "-312px") {
+                        if (isDestroyed == false && getComputedStyle(C3AddonVersion_Obj.sliderDIV).left === "-336px") {
                             divP.remove();
                             C3AddonVersion_Obj.sliderDIV.removeEventListener("mouseenter", funcEvent1);
                             C3AddonVersion_Obj.sliderDIV.removeEventListener("mouseleave", funcEvent2);
@@ -215,5 +215,5 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
             }
         }
     }
-    setTimeout(C3AddonVersion_Obj.funcChecker,3000);
+    setTimeout(C3AddonVersion_Obj.funcChecker,1500);
 } else C3AddonVersion_Obj = null;
