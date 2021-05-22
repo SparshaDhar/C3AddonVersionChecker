@@ -13,8 +13,7 @@ A common place for listing all Addon-Version Notifications.
 - Auto-destroys itself when out of viewport.
 - Snooze notification for 1 day option in client side
 
-![Screenshot1](https://user-images.githubusercontent.com/42723600/119240292-3f6e7e00-bb6c-11eb-832e-e46a1e00cec3.png)
-![Screenshot2](https://user-images.githubusercontent.com/42723600/119240338-8197bf80-bb6c-11eb-8476-cbf165a1d163.png)
+![Screenshot](https://user-images.githubusercontent.com/42723600/119241172-341e5100-bb72-11eb-8929-2d24adc2b3cf.png)
 
 ## Documentation
 
