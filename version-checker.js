@@ -128,9 +128,10 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 						margin:0;
 					}
 					#version_slider {
-						color:black;
-						font-size:12px;
-						font-family: sans-serif;
+					    overflow: auto;
+					    color:black;
+					    font-size:12px;
+					    font-family: sans-serif;
 					    position: absolute;
 					    top:8px;
 					    width:278px;
@@ -138,10 +139,10 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 					    padding-right:18px;
 					    background: #FFD54F;
 					    -moz-user-select: none;  
-						-webkit-user-select: none;  
-						-ms-user-select: none;  
-						-o-user-select: none;  
-						user-select: none;
+					    -webkit-user-select: none;  
+					    -ms-user-select: none;  
+					    -o-user-select: none;  
+					    user-select: none;
 					}
 
 					.version-slide-in {
