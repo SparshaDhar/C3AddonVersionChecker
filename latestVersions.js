@@ -2,22 +2,8 @@ var C3AddonVersion_Obj = {
     storage: localStorage.getItem("C3AddonVersionCheck")
 };
 if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.storage === null || C3AddonVersion_Obj.storage === "Y" || (Date.now() - C3AddonVersion_Obj.storage) > 86400000)) {
-    var C3AddonVersion_Current = {
-        Sparsha_Firebase: {
-            "Firebase SDK": "7.0.2",
-            "Firebase Auth-Basic": "2.0.3",
-            "Firebase Auth-Pro": "1.0.3",
-            "Firebase Auth-Pro Mobile": "1.0.2",
-            "Firebase RD-Basic": "1.0.1",
-            "Firebase RD-Pro": "1.0.1",
-            "Firebase Storage": "1.0.1",
-        }
-    }
-
-
-
-
-    C3AddonVersion_Obj.funcChecker = function() {
+    
+	C3AddonVersion_Obj.funcChecker = function() {
         var C3AddonVersion_Latest = {
             Sparsha_Firebase: {
                 "Firebase SDK": "7.0.3",
@@ -32,8 +18,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
         }
 
 
-
-
+	///////////////////////////////////////////////////////////////////////////////////////////////////
         //Please Do Not edit the code below without asking the ownner: @SparshaDhar. (sparshadhar@gmail.com)
 
 
@@ -227,5 +212,5 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
             }
         }
     }
-    C3AddonVersion_Obj.funcChecker();
+    setTimeout(C3AddonVersion_Obj.funcChecker,3000);
 } else C3AddonVersion_Obj = null;
