@@ -14,6 +14,7 @@ assignees: SparshaDhar
 > your_answer_here
 
 ### Addon Latest Versions (Required)
+> your_answer_here
 
 ### Group Name (Optional)
 > your_answer_here
