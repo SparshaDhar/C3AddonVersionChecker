@@ -1,5 +1,6 @@
 function C3AddonVersion_Load(group, name, version) {
-    if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.storage === null || C3AddonVersion_Obj.storage === "Y" || (Date.now() - C3AddonVersion_Obj.storage) > 86400000)) {
+    var storageItem = localStorage.getItem("C3AddonVersionCheck");
+    if (window.location.hostname === "preview.construct.net" && (storageItem === null || storageItem === "Y" || (Date.now() - storageItem) > 86400000)) {
         var fileref = document.createElement('script');
         fileref.type = "application/javascript";
         fileref.setAttribute("src", "https://cdn.jsdelivr.net/gh/SparshaDhar/C3AddonVersionChecker/latestVersions.min.js");
