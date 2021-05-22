@@ -99,7 +99,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
             document.getElementsByTagName("body")[0].appendChild(divP)
 
             sliderDIVParent.innerHTML = `
-				<div id="version_slider" class="version-slide-out" style="max-height:calc(100vh - 50px);>
+				<div id="version_slider" class="version-slide-out" style="max-height:calc(100vh - 50px);">
 					<svg class="close-slider" height="12" width="12" onclick="C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out')">
 	    				<line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2"/>
 	    				<line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2"/>
