@@ -2,8 +2,8 @@
 name: Request Version Include/Update
 about: File a request to include or update include the version of your data
 title: Update Versions
-labels: ''
-assignees: SparshaDhar
+labels: version update
+assignees: ''
 
 ---
 
