@@ -1,4 +1,5 @@
 
+
 # Addon Version Checker for Construct 3 Preview
 Compare versions and Notify client if installed addon version is older than the latest addon version available (works only in Construct 3 Preview).
 
@@ -14,7 +15,7 @@ A common place for listing all Addon-Version Notifications.
 - Auto-destroys itself when out of viewport.
 - Snooze notification for 1 day option in client side
 
-![Snapshot1](https://media.discordapp.net/attachments/710473860687855676/845723699239452673/Screenshot_2021-05-22_232830.png?width=600&height=328)
+![Screenshot1](https://user-images.githubusercontent.com/42723600/119240256-14842a00-bb6c-11eb-87e0-0192caa6090e.png)
 ![Snapshot2](https://media.discordapp.net/attachments/710473860687855676/845733695414730822/Screenshot_2021-05-22_232745.png?width=342&height=328)
 
 ## Documentation
@@ -74,3 +75,4 @@ Answer all qustions in this interview to become a contributor. [Click here](http
 
 #### Method 2: Request version updates
 Enter all the Required fields to get your request accepted. [Click here](https://github.com/SparshaDhar/C3AddonVersionChecker/issues/new?assignees=&labels=version+update&template=request-version-include-update.md&title=Update+Versions)
+
