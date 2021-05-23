@@ -2,7 +2,7 @@
 Compare versions and Notify client if installed addon version is older than the latest addon version available (works only in Construct 3 Preview).
 
 ## Features
-- Group Addons into `<div>`.
+- Group specific Addons into `<div>`.
 - Optional Release Notes and Download Link
 - Only lists all uptates available for addons included in current C3 Project.
 - Features Shadow dom element so that it cannot be accessed directly from `document` and global styles won't affect it.
@@ -15,11 +15,12 @@ Compare versions and Notify client if installed addon version is older than the 
 
 ## Documentation
 
-### Inside Addon
+### Inside Addon (Client-side): load-version-checker.js
+The "load-version-checker.js" is responsible for loading the server-side script "version-checker.js", and sending the current addon version info to the server-side.
 
 All Addon Version Checker Codes must be included the `"external-script"` type (also known as DOM side) script of the addon.
 
-For each of your plugin, create a domSide.js external-script. And then include the following code
+For each of your addon, create a domSide.js external-script. And then include the following code
 
 ```js
 C3AddonVersion_Set("YOUR_GROUP_NAME", "YOUR_ADDON_NAME", "ADDON_VERSION");
@@ -43,7 +44,8 @@ function C3AddonVersion_Set(group, name, version) {
 
 <br>
 
-### Online CDN File- version-checker.js
+### Online file (Server-side): version-checker.js
+The "version-checker.js" is the online file stored in this github page which contains all the latest information of the addons. It is responsible for comparing the version data fetched from the client-side with the data stored in this server-side file, and creating/managing the HTML elements for the notification if the latest version available is greater than the user's installed addon.
 
 Variable `C3AddonVersion_Latest` contains a JSON data of addon names and their latest versions.
 
