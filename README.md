@@ -69,7 +69,7 @@ var C3AddonVersion_Latest = {
 
 ### Requesting for Including New Update Records in version-checker.js
 
-#### Method 1: Become a contributor for updating your own Addon versions
+#### Method 1: Become a collaborator for updating your own Addon versions
 Answer all qustions in this interview to become a contributor. [Click here](https://github.com/SparshaDhar/C3AddonVersionChecker/issues/new?assignees=&labels=interview&template=contributor-interview.md&title=Contributor+Interview)
 
 #### Method 2: Request version updates
