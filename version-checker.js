@@ -1,104 +1,106 @@
 var C3AddonVersion_Obj = {
-    storage: localStorage.getItem("C3AddonVersionCheck")
+	storage: localStorage.getItem("C3AddonVersionCheck")
 };
 if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.storage === null || C3AddonVersion_Obj.storage === "Y" || (Date.now() - C3AddonVersion_Obj.storage) > 86400000)) {
-    
+
 	C3AddonVersion_Obj.funcChecker = function() {
-        var C3AddonVersion_Latest = {
-            Sparsha_Firebase: {
-                "Firebase SDK": "7.0.3",
-                "Firebase Auth-Basic": "6.0.3",
-                "Firebase Auth-Pro": "3.0.3",
-                "Firebase Auth-Pro Mobile": "2.0.2",
-                "Firebase RD-Basic": "6.0.1",
-                "Firebase RD-Pro": "3.0.1",
-                "Firebase Storage": "2.0.1",
-                $releaseNotes: "https://www.constructfirebase.com/releases/release-notes",
-            },
-        }
+		var C3AddonVersion_Latest = {
+			Sparsha_Firebase: {
+				"Firebase SDK": "7.0.3",
+				"Firebase Auth-Basic": "6.0.3",
+				"Firebase Auth-Pro": "3.0.3",
+				"Firebase Auth-Pro Mobile": "2.0.2",
+				"Firebase RD-Basic": "6.0.1",
+				"Firebase RD-Pro": "3.0.1",
+				"Firebase Storage": "2.0.1",
+				$releaseNotes: "https://www.constructfirebase.com/releases/release-notes",
+			},
+		}
 
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Please Do Not edit the code below without permission from the owner: @SparshaDhar.
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//Please Do Not edit the code below without permission from the owner: @SparshaDhar.
 
 
-        var isOutdated = false;
-        var insHTML = "";
+		var isOutdated = false;
+		var insHTML = "";
 
 
-        function CompareActions(check, version, text) {
-            function versionCompare(v1, v2, options) {
-                var lexicographical = options && options.lexicographical,
-                    zeroExtend = options && options.zeroExtend,
-                    v1parts = v1.split('.'),
-                    v2parts = v2.split('.');
+		function CompareActions(check, version, text) {
+			function versionCompare(v1, v2, options) {
+				var lexicographical = options && options.lexicographical,
+					zeroExtend = options && options.zeroExtend,
+					v1parts = v1.split('.'),
+					v2parts = v2.split('.');
 
-                function isValidPart(x) {
-                    return (lexicographical ? /^\d+[A-Za-z]*$/ : /^\d+$/).test(x);
-                }
+				function isValidPart(x) {
+					return (lexicographical ? /^\d+[A-Za-z]*$/ : /^\d+$/).test(x);
+				}
 
-                if (!v1parts.every(isValidPart) || !v2parts.every(isValidPart)) {
-                    return NaN;
-                }
+				if (!v1parts.every(isValidPart) || !v2parts.every(isValidPart)) {
+					return NaN;
+				}
 
-                if (zeroExtend) {
-                    while (v1parts.length < v2parts.length) v1parts.push("0");
-                    while (v2parts.length < v1parts.length) v2parts.push("0");
-                }
+				if (zeroExtend) {
+					while (v1parts.length < v2parts.length) v1parts.push("0");
+					while (v2parts.length < v1parts.length) v2parts.push("0");
+				}
 
-                if (!lexicographical) {
-                    v1parts = v1parts.map(Number);
-                    v2parts = v2parts.map(Number);
-                }
+				if (!lexicographical) {
+					v1parts = v1parts.map(Number);
+					v2parts = v2parts.map(Number);
+				}
 
-                for (var i = 0; i < v1parts.length; ++i) {
-                    if (v2parts.length == i) {
-                        return 1;
-                    }
+				for (var i = 0; i < v1parts.length; ++i) {
+					if (v2parts.length == i) {
+						return 1;
+					}
 
-                    if (v1parts[i] == v2parts[i]) {
-                        continue;
-                    } else if (v1parts[i] > v2parts[i]) {
-                        return 1;
-                    } else {
-                        return -1;
-                    }
-                }
+					if (v1parts[i] == v2parts[i]) {
+						continue;
+					} else if (v1parts[i] > v2parts[i]) {
+						return 1;
+					} else {
+						return -1;
+					}
+				}
 
-                if (v1parts.length != v2parts.length) {
-                    return -1;
-                }
+				if (v1parts.length != v2parts.length) {
+					return -1;
+				}
 
-                return 0;
-            }
+				return 0;
+			}
 
-            if (version != undefined && versionCompare(check, version) === 1) {
-                insHTML += text + ": " + version + " ➜ " + check + "<br>";
-                isOutdated = true;
-            }
-        }
+			if (version != undefined && versionCompare(check, version) === 1) {
+				insHTML += text + ": " + version + " ➜ " + check + "<br>";
+				isOutdated = true;
+			}
+		}
 
-        Object.keys(C3AddonVersion_Current).forEach(function(key) {
-            insHTML += "<div class='div-slider'>";
-            Object.keys(C3AddonVersion_Current[key]).forEach(function(k) {
-                CompareActions(C3AddonVersion_Latest[key][k], C3AddonVersion_Current[key][k], [k]);
-            });
-            if (C3AddonVersion_Latest[key].$releaseNotes != undefined) insHTML += '<a href="' + C3AddonVersion_Latest[key].$releaseNotes + '" target="_blank"><h4>View Release Notes</h4></a>';
-	    if (C3AddonVersion_Latest[key].$downloadLink != undefined) insHTML += '<a href="' + C3AddonVersion_Latest[key].$downloadLink + '" target="_blank"><h4>Download Link</h4></a>';
-            insHTML += "</div><br>";
-        });
+		Object.keys(C3AddonVersion_Current).forEach(function(key) {
+			insHTML += "<div class='div-slider'>";
+			Object.keys(C3AddonVersion_Current[key]).forEach(function(k) {
+				CompareActions(C3AddonVersion_Latest[key][k], C3AddonVersion_Current[key][k], [k]);
+			});
+			if (C3AddonVersion_Latest[key].$releaseNotes != undefined) insHTML += '<a href="' + C3AddonVersion_Latest[key].$releaseNotes + '" target="_blank"><h4>View Release Notes</h4></a>';
+			if (C3AddonVersion_Latest[key].$downloadLink != undefined) insHTML += '<a href="' + C3AddonVersion_Latest[key].$downloadLink + '" target="_blank"><h4>Download Link</h4></a>';
+			insHTML += "</div><br>";
+		});
 
-        insHTML = insHTML.substring(0, insHTML.length - 4);
+		insHTML = insHTML.substring(0, insHTML.length - 4);
 
-        if (isOutdated) {
-            //var shadowRoot = div.attachShadow({mode: 'open'});
-            //C3AddonVersion_Latest.sliderDIVParent = document.getElementsByTagName('body')[0]document.createElement("version_sliderParent");
-            var divP = document.createElement('div');
-            var sliderDIVParent = divP.attachShadow({ mode: 'open' });
-            //document.getElementsByTagName("body")[0].appendChild(C3AddonVersion_Latest.sliderDIVParent);
-            document.getElementsByTagName("body")[0].appendChild(divP)
+		if (isOutdated) {
+			//var shadowRoot = div.attachShadow({mode: 'open'});
+			//C3AddonVersion_Latest.sliderDIVParent = document.getElementsByTagName('body')[0]document.createElement("version_sliderParent");
+			var divP = document.createElement('div');
+			var sliderDIVParent = divP.attachShadow({
+				mode: 'open'
+			});
+			//document.getElementsByTagName("body")[0].appendChild(C3AddonVersion_Latest.sliderDIVParent);
+			document.getElementsByTagName("body")[0].appendChild(divP)
 
-            sliderDIVParent.innerHTML = `
+			sliderDIVParent.innerHTML = `
 				<div id="version_slider" class="version-slide-out" style="max-height:calc(100vh - 50px);">
 					<svg class="close-slider" height="12" width="12" onclick="C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out')">
 	    				<line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2"/>
@@ -157,63 +159,65 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 					}
 				<//style>
 			`;
-            var isMouseover = false;
+			var isMouseover = false;
 
-            C3AddonVersion_Obj.sliderDIV = sliderDIVParent.getElementById('version_slider');
+			C3AddonVersion_Obj.sliderDIV = sliderDIVParent.getElementById('version_slider');
 
-            //Initial Slide in after 0.5 seconds
-            setTimeout(function() { C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-in') }, 500);
+			//Initial Slide in after 0.5 seconds
+			setTimeout(function() {
+				C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-in')
+			}, 500);
 
-            //Mouse Event Listeners
-            var funcEvent1 = function() {
-                isMouseover = true;
-                C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-in')
-            }
-            var funcEvent2 = function() {
-                isMouseover = false;
-                setTimeout(function() {
-                    if (isMouseover === false) {
-                        C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out');
-                        Destroy();
-                    }
-                }, 500);
-            }
-            C3AddonVersion_Obj.sliderDIV.addEventListener("mouseenter", funcEvent1, false);
-            C3AddonVersion_Obj.sliderDIV.addEventListener("mouseleave", funcEvent2, false);
+			//Mouse Event Listeners
+			var funcEvent1 = function() {
+				isMouseover = true;
+				C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-in')
+			}
+			var funcEvent2 = function() {
+				isMouseover = false;
+				setTimeout(function() {
+					if (isMouseover === false) {
+						C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out');
+						Destroy();
+					}
+				}, 500);
+			}
+			C3AddonVersion_Obj.sliderDIV.addEventListener("mouseenter", funcEvent1, false);
+			C3AddonVersion_Obj.sliderDIV.addEventListener("mouseleave", funcEvent2, false);
 
-            //Slide out after 6 seconds
-            setTimeout(function() {
-                if (isMouseover === false) {
-                    C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out');
-                    Destroy();
-                }
-            }, 6000);
+			//Slide out after 6 seconds
+			setTimeout(function() {
+				if (isMouseover === false) {
+					C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out');
+					Destroy();
+				}
+			}, 6000);
 
-            //Snooze
-            C3AddonVersion_Obj.Snooze = function() {
-                var checkBox = sliderDIVParent.getElementById('version-snooze-box');
-                if (checkBox.checked) localStorage.setItem('C3AddonVersionCheck', Date.now());
-                else localStorage.setItem('C3AddonVersionCheck', 'Y');
-            }
+			//Snooze
+			C3AddonVersion_Obj.Snooze = function() {
+				var checkBox = sliderDIVParent.getElementById('version-snooze-box');
+				if (checkBox.checked) localStorage.setItem('C3AddonVersionCheck', Date.now());
+				else localStorage.setItem('C3AddonVersionCheck', 'Y');
+			}
 
-            //Destroy C3AddonChecker elements, events, objects and references if it is outside view
-            var isDestroyed = false;
+			//Destroy C3AddonChecker elements, events, objects and references if it is outside view
+			var isDestroyed = false;
 
-            function Destroy() {
-                if (isMouseover === false) {
-                    setTimeout(function() {
-                        if (isDestroyed == false && getComputedStyle(C3AddonVersion_Obj.sliderDIV).left === "-336px") {
-                            divP.remove();
-                            C3AddonVersion_Obj.sliderDIV.removeEventListener("mouseenter", funcEvent1);
-                            C3AddonVersion_Obj.sliderDIV.removeEventListener("mouseleave", funcEvent2);
-                            C3AddonVersion_Latest = null;
-                            C3AddonVersion_Obj = null;
-                            isDestroyed = true;
-                        }
-                    }, 6000)
-                }
-            }
-        }
-    }
-    setTimeout(C3AddonVersion_Obj.funcChecker,1500);
+			function Destroy() {
+				if (isMouseover === false) {
+					setTimeout(function() {
+						if (isDestroyed == false && getComputedStyle(C3AddonVersion_Obj.sliderDIV).left === "-336px") {
+							divP.remove();
+							C3AddonVersion_Obj.sliderDIV.removeEventListener("mouseenter", funcEvent1);
+							C3AddonVersion_Obj.sliderDIV.removeEventListener("mouseleave", funcEvent2);
+							C3AddonVersion_Latest = null;
+							C3AddonVersion_Obj = null;
+							isDestroyed = true;
+						}
+					}, 6000)
+				}
+			}
+		}
+	}
+	setTimeout(C3AddonVersion_Obj.funcChecker, 1500);
 } else C3AddonVersion_Obj = null;
