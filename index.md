@@ -3,6 +3,9 @@ Compare versions and Notify client if installed addon version is older than the 
 
 It checks for all addons,  included in a C3 project and presents the notification in a list when in preview. Addons are grouped on request of the addon author. (How to request your addon is mentioned below).
 
+## Demo Preview
+https://sparshadhar.github.io/C3AddonVersionChecker/demo-preview.html
+
 ## Features
 - Group specific Addons into `<div>`.
 - Optional Release Notes and Download Link
