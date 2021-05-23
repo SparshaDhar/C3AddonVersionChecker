@@ -1,6 +1,8 @@
 # Addon Version Checker for Construct 3 Preview
 Compare versions and Notify client if installed addon version is older than the latest addon version available (works only in Construct 3 Preview).
 
+It checks for all addons,  included in a C3 project and presents the notification in a list when in preview. Addons are grouped on request of the addon author. (How to request your addon is mentioned below).
+
 ## Features
 - Group specific Addons into `<div>`.
 - Optional Release Notes and Download Link
@@ -73,3 +75,9 @@ Answer all qustions in this interview to become a contributor. [Click here](http
 #### Method 2: Request version updates
 Enter all the Required fields to get your request accepted. [Click here](https://github.com/SparshaDhar/C3AddonVersionChecker/issues/new?assignees=&labels=version+update&template=request-version-include-update.md&title=Update+Versions)
 
+<br><br>
+------
+
+[![twitter](https://media.discordapp.net/attachments/710473860687855676/845914202765000715/Twitter_social_icons_-_circle_-_blue.png?width=32&height=32)](https://twitter.com/SparshaDhar)
+[![itch](https://media.discordapp.net/attachments/710473860687855676/845914204757032960/itch_icon_146025.png?width=32&height=32)](https://sparsha-dhar.itch.io/)
+[![patreon](https://media.discordapp.net/attachments/710473860687855676/845914207115673650/Untitled.png?width=32&height=32)](https://www.patreon.com/sparsha)
