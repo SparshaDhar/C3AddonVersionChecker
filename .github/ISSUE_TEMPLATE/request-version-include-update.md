@@ -7,20 +7,20 @@ assignees: ''
 
 ---
 
-### Addon URLs (Required)
-> your_answer_here
+### Addon URLs (Required for first request)
+- your_answer_here
 
 ### Addon Names (Required)
-> your_answer_here
+- your_answer_here
 
 ### Addon Latest Versions (Required)
-> your_answer_here
+- your_answer_here
 
 ### Group Name (Optional)
-> your_answer_here
+your_answer_here
 
 ### Release-Notes URL (Optional)
-> your_answer_here
+your_answer_here
 
 ### Download-Link URL (Optional)
-> your_answer_here
+your_answer_here
