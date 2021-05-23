@@ -16,9 +16,9 @@ Compare versions and Notify client if installed addon version is older than the 
 ## Documentation
 
 ### Inside Addon (Client-side): load-version-checker.js
-The "load-version-checker.js" is responsible for loading the server-side script "version-checker.js", and sending the current addon version info to the server-side.
+The "load-version-checker.js" is responsible for loading the server-side script, "version-checker.js", and sending the current addon version info to the server-side.
 
-All Addon Version Checker Codes must be included the `"external-script"` type (also known as DOM side) script of the addon.
+All Addon Version Checker Codes must be included in an `"external-script"` (also known as DOM side) script of the addon.
 
 For each of your addon, create a domSide.js external-script. And then include the following code
 
