@@ -1,3 +1,8 @@
+/*The C3AddonVersion_Set function sets current versions of plugin and loads the online file- version-checker.js*/
+
+//C3AddonVersion_Set("YOUR_GROUP_NAME", "YOUR_ADDON_NAME", "ADDON_VERSION");
+
+/*DO NOT EDIT THE CODE BELOW*/
 function C3AddonVersion_Set(group, name, version) {
     var storageItem = localStorage.getItem("C3AddonVersionCheck");
     if (window.location.hostname === "preview.construct.net" && (storageItem === null || storageItem === "Y" || (Date.now() - storageItem) > 86400000)) {
