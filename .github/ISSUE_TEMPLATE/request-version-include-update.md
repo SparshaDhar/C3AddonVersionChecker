@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-### Addon URLs (Required for first request)
+### Addon URLs (Required for new requests)
 - your_answer_here
 
 ### Addon Names (Required)
