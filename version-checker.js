@@ -8,7 +8,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 			Sparsha_Firebase: {
 				"Firebase SDK": "7.0.5",
 				"Firebase Auth-Basic": "6.0.6",
-				"Firebase Auth-Pro": "3.0.4",
+				"Firebase Auth-Pro": "3.0.5",
 				"Firebase Auth-Pro Mobile": "2.0.3",
 				"Firebase RD-Basic": "6.0.1",
 				"Firebase RD-Pro": "3.0.1",
