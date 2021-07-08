@@ -186,13 +186,13 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 			C3AddonVersion_Obj.sliderDIV.addEventListener("mouseenter", funcEvent1, false);
 			C3AddonVersion_Obj.sliderDIV.addEventListener("mouseleave", funcEvent2, false);
 
-			//Slide out after 6 seconds
+			//Slide out after 8 seconds
 			setTimeout(function() {
 				if (isMouseover === false) {
 					C3AddonVersion_Obj.sliderDIV.setAttribute('class', 'version-slide-out');
 					Destroy();
 				}
-			}, 6000);
+			}, 8000);
 
 			//Snooze
 			C3AddonVersion_Obj.Snooze = function() {
