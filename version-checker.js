@@ -6,7 +6,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 	C3AddonVersion_Obj.funcChecker = function() {
 		var C3AddonVersion_Latest = {
 			Sparsha_Firebase: {
-				"Firebase SDK": "8.0.0",
+				"Firebase SDK": "8.1.0",
 				"Firebase Auth-Basic": "6.0.7",
 				"Firebase Auth-Worker": "1.0.0",
 				"Firebase Auth-Pro": "3.0.6",
