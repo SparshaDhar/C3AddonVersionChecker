@@ -11,6 +11,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 				"Firebase Auth-Worker": "1.0.0",
 				"Firebase Auth-Pro": "3.0.6",
 				"Firebase Auth-Pro Mobile": "2.0.3",
+				"Firebase Auth (Mobile)- Google": "1.0.0",
 				"Firebase RD-Basic": "6.0.1",
 				"Firebase RD-Pro": "3.0.1",
 				"Firebase Storage": "2.0.1",
