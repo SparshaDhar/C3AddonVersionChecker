@@ -6,14 +6,14 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 	C3AddonVersion_Obj.funcChecker = function() {
 		var C3AddonVersion_Latest = {
 			Sparsha_Firebase: {
-				"Firebase SDK": "8.1.0",
+				"Firebase SDK": "8.2.0",
 				"Firebase Auth-Basic": "6.0.7",
 				"Firebase Auth-Worker": "1.0.0",
 				"Firebase Auth-Pro": "3.0.6",
 				"Firebase Auth-Pro Mobile": "2.0.3",
 				"Firebase Auth (Mobile)- Google": "1.0.0",
-				"Firebase RD-Basic": "6.0.1",
-				"Firebase RD-Pro": "3.0.1",
+				"Firebase RD-Basic": "6.0.2",
+				"Firebase RD-Pro": "4.0.0",
 				"Firebase Storage": "2.0.1",
 				$releaseNotes: "https://www.constructfirebase.com/releases/release-notes",
 			},
