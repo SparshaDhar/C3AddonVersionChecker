@@ -17,6 +17,10 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 				"Firebase Storage": "2.0.1",
 				$releaseNotes: "https://www.constructfirebase.com/releases/release-notes",
 			},
+			Sparsha_RemoteImage: {
+				"Remote Image": "3.1.0",
+				$releaseNotes: "https://www.construct.net/en/make-games/addons/570/remote-image",
+			}
 		}
 
 
