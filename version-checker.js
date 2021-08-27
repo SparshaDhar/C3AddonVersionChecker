@@ -15,6 +15,7 @@ if (window.location.hostname === "preview.construct.net" && (C3AddonVersion_Obj.
 				"Firebase RD-Basic": "6.0.2",
 				"Firebase RD-Pro": "4.0.0",
 				"Firebase Storage": "2.0.1",
+				"Firebase Dynamic Links": "1.0.0",
 				$releaseNotes: "https://www.constructfirebase.com/releases/release-notes",
 			},
 			Sparsha_RemoteImage: {
