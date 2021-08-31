@@ -1,6 +1,5 @@
-[![](https://data.jsdelivr.com/v1/package/gh/SparshaDhar/C3AddonVersionChecker/badge)](https://www.jsdelivr.com/package/gh/SparshaDhar/C3AddonVersionChecker)
+# Addon Version Checker for Construct 3 [![](https://data.jsdelivr.com/v1/package/gh/SparshaDhar/C3AddonVersionChecker/badge)](https://www.jsdelivr.com/package/gh/SparshaDhar/C3AddonVersionChecker)
 
-# Addon Version Checker for Construct 3
 Compare versions and Notify client if installed addon version is older than the latest addon version available (works only in Construct 3 Preview).
 
 It checks for all addons,  included in a C3 project and presents the notification in a list when in preview. Addons are grouped on request of the addon author. (How to request your addon is mentioned below).
